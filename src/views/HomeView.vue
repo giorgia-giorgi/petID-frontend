@@ -1,7 +1,7 @@
 <template>
   <div class="page">
 
-    <!-- 🌫 BACKGROUND NEUTRO PET -->
+    <!-- BACKGROUND -->
     <div class="bg"></div>
     <div class="overlay"></div>
 
@@ -107,98 +107,80 @@ const pets = [
 </script>
 
 <style scoped>
+
+/* BODY */
 :global(body) {
   margin: 0;
   font-family: "Inter", system-ui, sans-serif;
-  overflow: hidden;
 }
 
+/* PAGE */
 .page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.bg {
   position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* background */
-.bg {
-  position: absolute;
-  inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, #f1f5f9, transparent 40%),
-    radial-gradient(circle at 80% 30%, #e2e8f0, transparent 45%),
+    radial-gradient(circle at 20% 20%, #0db2e9, transparent 40%),
+    radial-gradient(circle at 80% 30%, #035ed4, transparent 45%),
     radial-gradient(circle at 50% 80%, #f8fafc, transparent 50%),
-    linear-gradient(135deg, #f8fafc, #e5e7eb);
+    linear-gradient(135deg, #2b5279, #3966c0);
 }
 
 .overlay {
-  position: absolute;
+  position: fixed; /* 🔥 fix */
   inset: 0;
-  background: rgba(15, 23, 42, 0.04);
+  background: rgb(233, 174, 13);
 }
 
-/* 🔥 FIX IMPORTANTE: layout non centrato verticale */
+/* CONTAINER */
 .container {
   position: relative;
   z-index: 2;
 
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
 
   padding: 40px 20px;
-
-  overflow: hidden;
 }
 
+/* TITLE */
 h1 {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 800;
-  margin-bottom: 24px;
-  color: #111827;
+  margin-bottom: 25px;
+  color: #000000;
 }
 
-/* 🔥 GRID CORRETTA (QUESTO È IL PUNTO CHIAVE) */
+/* GRID */
 .grid {
   display: grid;
 
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(2, 1fr); /* 🔥 2 per riga */
+  gap: 20px;
 
   width: 100%;
-  max-width: 1200px;
-
-  align-items: start;
-  justify-items: center;
-
-  overflow: hidden;
+  max-width: 900px;
 }
 
-/* responsive */
-@media (max-width: 1100px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 500px) {
+/* MOBILE */
+@media (max-width: 700px) {
   .grid {
     grid-template-columns: 1fr;
   }
+
+  h1 {
+    font-size: 28px;
+  }
 }
+
 </style>
