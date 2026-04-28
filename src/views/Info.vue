@@ -186,66 +186,6 @@ const submitForm = () => {
 </script>
 
 <style scoped>
-.page {
-  position: fixed;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  font-family: system-ui;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 🔥 overlay più elegante */
-.overlay {
-  position: absolute;
-  inset: 0;
-
-  background: rgba(10, 10, 10, 0.55); /* scuro soft */
-  backdrop-filter: blur(3px);
-}
-
-/* contenuto centrato vero */
-.content {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; /* 🔥 CENTRATO VERO */
-}
-
-/* card form */
-.form {
-  width: 150%;
-
-  background: rgba(255, 255, 255, 0.92);
-  border-radius: 18px;
-
-  padding: 25px;
-
-  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-}
-
-/* TITOLI */
-h1 {
-  color: #fff;
-  margin-bottom: 15px;
-  font-weight: 900;
-}
-
-h2 {
-  color: #111;
-  font-weight: 800;
-}
-
-label {
-  color: #000;
-}
 
 /* STEP */
 .steps {
@@ -268,18 +208,6 @@ label {
   margin-top: 10px;
 }
 
-/* input */
-input, textarea, select {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #eab308;
-  outline: none;
-}
-
-input[type="file"] {
-  color: #000;
-}
-
 /* NAV */
 .nav {
   display: flex;
@@ -288,22 +216,6 @@ input[type="file"] {
   margin-top: 25px;
 }
 
-/* BOTTONI GIALLO BRAND */
-button {
-  padding: 10px 18px;
-  border-radius: 12px;
-  border: none;
-
-  background: #facc15;
-  color: #111;
-  font-weight: 800;
-
-  cursor: pointer;
-}
-
-button:hover {
-  background: #eab308;
-}
 
 /* IMMAGINI */
 .preview {

@@ -33,3 +33,72 @@ a,
     padding: 0 2rem;
   }
 }
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #fbbf24;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+
+input, select, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+
+/* LINKS */
+.links {
+  margin-top: 16px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.links b {
+  cursor: pointer;
+  color: inherit;
+}
+
+.forgot {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.text-dark {
+  color: #111827; /* nero quasi pieno ma elegante */
+}
+
+.links-dark {
+  color: #111827;
+}
+
+.links-dark b {
+  color: #111827;
+  font-weight: 700;
+}
+
+/* TITLE */
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+/* FORM CENTRATO */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+} 
